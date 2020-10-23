@@ -19,7 +19,7 @@
         var nombre = document.getElementById("nombre"),
             apellido = document.getElementById("apellido"),
             email = document.getElementById("email");
-        //Campo pases
+        //CAMPOS PASES
         var pase_dia = document.getElementById("pase_dia"),
             pase_dosdia = document.getElementById("pase_dosdia"),
             pase_completo = document.getElementById("pase_completo");
@@ -74,6 +74,7 @@
             if (regalo.value === "") {
                 alert("Debes elegir un regalo")
                 regalo.focus();
+                console.log("has hecho click");
 
             } else {
                 console.log("Ya has elegido el regalo");
