@@ -5,6 +5,7 @@
 
     document.addEventListener("DOMContentLoaded", function () {
 
+        if( document.getElementById('mapa') ){
         var map = L.map('mapa').setView([-34.900411, -56.18391], 17);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -15,6 +16,7 @@
             .openPopup()
             .bindTooltip("Un Tooltip")
             .openTooltip();
+        }
         //Campo datos usuarios
         var nombre = document.getElementById("nombre"),
             apellido = document.getElementById("apellido"),
@@ -133,12 +135,12 @@
                 document.getElementById(diasElegidos[i]).style.display = "block";
             }
         }
-        //AGREGADO DE UNA PREGUNTA DE UDEMY
-        var url = window.location.pathname;
-        var filename = url.substring(url.lastIndexOf('/')+1);
-        
-        if(filename=="registro.php"){
-        botonRegistro.disabled=true;
+                //AGREGADO DE UNA PREGUNTA DE UDEMY
+                var url = window.location.pathname;
+                var filename = url.substring(url.lastIndexOf('/')+1);
+                
+                if(filename=="registro.php"){
+                botonRegistro.disabled=true;
         }
     });
 })();

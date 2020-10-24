@@ -61,6 +61,7 @@
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
 
+<script src="js/main.js"></script>
 
 <?php 
     $archivo = basename($_SERVER['PHP_SELF']);
@@ -74,7 +75,6 @@
       echo '<script src="js/lightbox.js"></script>';
     }        
 ?>
-<script src="js/main.js"></script>
 <script src="js/cotizador.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/jquery.animateNumber.min.js"></script>
