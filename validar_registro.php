@@ -1,3 +1,3 @@
 <pre>
-    <?php var_dump($POST) ?>
+    <?php var_dump($_POST) ?>
 </pre>
