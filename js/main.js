@@ -5,17 +5,17 @@
 
     document.addEventListener("DOMContentLoaded", function () {
 
-        if( document.getElementById('mapa') ){
-        var map = L.map('mapa').setView([-34.900411, -56.18391], 17);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+        if (document.getElementById('mapa')) {
+            var map = L.map('mapa').setView([-34.900411, -56.18391], 17);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
 
-        L.marker([-34.900411, -56.18391]).addTo(map)
-            .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-            .openPopup()
-            .bindTooltip("Un Tooltip")
-            .openTooltip();
+            L.marker([-34.900411, -56.18391]).addTo(map)
+                .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+                .openPopup()
+                .bindTooltip("Un Tooltip")
+                .openTooltip();
         }
         //Campo datos usuarios
         var nombre = document.getElementById("nombre"),
@@ -35,6 +35,7 @@
         var camisas = document.getElementById("camisa_evento");
         var etiquetas = document.getElementById("etiquetas");
 
+        botonregistro.disable = true;
         calcular.addEventListener("click", calcularMontos);
 
         pase_dia.addEventListener("blur", mostrarDias);
@@ -113,6 +114,16 @@
                     lista_productos.innerHTML += listadoProductos[i] + "<br/>";
                 }
                 suma.innerHTML = "$ " + totalPagar.toFixed(2);
+                botonregistro.disable = false;
+                botonRegistro.style.opacity = "1.0";
+                botonRegistro.style.cursor = "pointer";
+                document.getElementById("total_pedido").value = totalPagar;
+                botonRegistro.disabled = true;
+                botonRegistro.style.opacity = "0.5";
+                botonRegistro.style.cursor = "auto";
+
+                
+                
             }
         }
 
@@ -135,12 +146,13 @@
                 document.getElementById(diasElegidos[i]).style.display = "block";
             }
         }
-                //AGREGADO DE UNA PREGUNTA DE UDEMY
-                var url = window.location.pathname;
-                var filename = url.substring(url.lastIndexOf('/')+1);
-                
-                if(filename=="registro.php"){
-                botonRegistro.disabled=true;
+        //AGREGADO DE UNA PREGUNTA DE UDEMY
+        var url = window.location.pathname;
+        var filename = url.substring(url.lastIndexOf('/') + 1);
+
+        if (filename == "registro.php") {
+            botonRegistro.disabled = true;
+
         }
     });
 })();
@@ -151,7 +163,7 @@ $(function () {
     $(`body.conferencia .navegacion-principal a:contains("Conferencia")`).addClass("activo");
     $(`body.calendario .navegacion-principal a:contains("Calendario")`).addClass("activo");
     $(`body.invitados .navegacion-principal a:contains("Invitados")`).addClass("activo");
-    
+
     //MENU FIJO
     var alturaventana = $(window).height();
     var barraAltura = $(".barra").innerHeight();
@@ -374,6 +386,9 @@ $(function () {
 
     });
     //colorbox
-            $(".invitado-info").colorbox({inline:true, width:"50%"});
+    $(".invitado-info").colorbox({
+        inline: true,
+        width: "50%"
+    });
 
 });

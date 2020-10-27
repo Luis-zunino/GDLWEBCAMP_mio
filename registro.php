@@ -178,7 +178,7 @@
             </select>
           </div>
           <!--orden-->
-          <input type="button" id="btnpagar" class="boton" value="Calcular">
+          <input type="button" id="btnpagar" class="button" value="Calcular">
         </div>
         <!--extras-->
         <!--TOTAL O PAGAR-->
