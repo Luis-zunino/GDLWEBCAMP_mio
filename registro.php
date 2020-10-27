@@ -8,8 +8,8 @@
         <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre">
       </div>
       <div class="campo">
-        <label for="Apellido">Apellido</label>
-        <input type="text" id="apellido" name="Apellido" placeholder="Tu Apellido">
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido" placeholder="Tu Apellido">
       </div>
       <div class="campo">
         <label for="email">Email</label>
@@ -170,7 +170,7 @@
           <!--.orden-->
           <div class="orden">
             <label for="regalo">Seleccione un regalo</label>
-            <select id="regalos" required>
+            <select id="regalos" name="regalo" required>
               <option value="">-- Seleccione un regalo --</option>
               <option value="2">Etiquetas</option>
               <option value="1">Pulseras</option>
