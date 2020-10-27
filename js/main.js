@@ -35,7 +35,7 @@
         var camisas = document.getElementById("camisa_evento");
         var etiquetas = document.getElementById("etiquetas");
 
-        botonregistro.disable = true;
+        //botonregistro.disable = true; //-
         calcular.addEventListener("click", calcularMontos);
 
         pase_dia.addEventListener("blur", mostrarDias);
@@ -114,13 +114,10 @@
                     lista_productos.innerHTML += listadoProductos[i] + "<br/>";
                 }
                 suma.innerHTML = "$ " + totalPagar.toFixed(2);
-                botonregistro.disable = false;
-                botonRegistro.style.opacity = "1.0";
-                botonRegistro.style.cursor = "pointer";
+                botonregistro.disable = false; //-
+             
                 document.getElementById("total_pedido").value = totalPagar;
-                botonRegistro.disabled = true;
-                botonRegistro.style.opacity = "0.5";
-                botonRegistro.style.cursor = "auto";
+             
 
                 
                 
@@ -151,7 +148,7 @@
         var filename = url.substring(url.lastIndexOf('/') + 1);
 
         if (filename == "registro.php") {
-            botonRegistro.disabled = true;
+            botonregistro.disabled = true;
 
         }
     });

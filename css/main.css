@@ -179,7 +179,7 @@ h3 {
 .button.transparente:hover {
   border: 2px solid #fe4918;
 }
-.btn:disabled {
+.button:disabled {
   opacity: 0.5;
 }
 
